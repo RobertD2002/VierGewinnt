@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
+//test
 public class Spiel {
     private static  final Scanner lesen = new Scanner(System.in);
     public static void main(String[] args){
