@@ -4,10 +4,9 @@ import java.util.Scanner;
 public class Spiel {
     private static  final Scanner lesen = new Scanner(System.in);
     public static void main(String[] args){
-       /*
         Spieler p1 = spieleranlegen();
         Spieler p2 = spieleranlegen();
-        p1.setCurrent(true);*/
+        p1.setCurrent(true);
         Stein s1 = steinAnlegenSpieler1();
         Stein s2 = steinAnlegenSpieler2();
         Stein[][] brett = spielBrettErzeugen();
