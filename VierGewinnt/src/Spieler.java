@@ -20,4 +20,13 @@ public class Spieler
     public void setName(String name){
         this.name = name;
     }
+
+    public boolean getCurrent(){
+        return this.current;
+    }
+
+    public void setCurrent(boolean current){
+       this.current = current;
+    }
 }
+

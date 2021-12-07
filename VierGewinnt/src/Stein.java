@@ -1,7 +1,8 @@
+import javax.swing.*;
+
 public class Stein {
     private String farbe;
-    private char form = '○';
-
+    private char form ;
 
 
     public  Stein(){
@@ -9,7 +10,13 @@ public class Stein {
     }
     public Stein (String farbe, char form) {
         this.farbe = farbe;
-        this.form = form;
+        this.form = '○';
+    }
+
+
+    //Override
+    public String toString() {
+            return "    " + this.farbe + this.form;
     }
     //Getter Setter
     public String getFarbe() {
@@ -18,5 +25,13 @@ public class Stein {
 
     public void setFarbe(String farbe) {
         this.farbe = farbe;
+    }
+
+    public char getForm() {
+        return  form;
+    }
+
+    public void setForm(char form) {
+        this.form = form;
     }
 }
