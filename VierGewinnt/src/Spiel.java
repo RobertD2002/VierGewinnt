@@ -10,13 +10,14 @@ public class Spiel {
         Stein s1 = new Stein("\u001B[34m",'○');
         Stein s2 = new Stein("\u001B[31m",'○');
         Stein[][] brett = Protokoll.spielBrettErzeugen();
-        brett[1][2] = s1;
-        brett[1][3] = s1;
-        brett[1][4] = s1;
-        brett[1][5] = s1;
-        brett[3][5] = s1;
-        brett[4][5] = s1;
-        brett[4][2] = s2;
+        brett[0][0] = s1;
+        brett[1][0] = s1;
+        brett[2][0] = s1;
+        brett[3][0] = s1;
+        brett[4][0] = s1;
+        brett[5][0] = s1;
+        Protokoll.brettAusgeben(brett);
+        brett = p2.steinLegen(s2, brett);
         Protokoll.brettAusgeben(brett);
     }
 }
