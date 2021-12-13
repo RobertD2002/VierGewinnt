@@ -4,21 +4,37 @@ import java.util.Scanner;
 public class Spiel {
     private static  final Scanner lesen = new Scanner(System.in);
     public static void main(String[] args){
+        boolean gewinner = false;
         Spieler p1 = Protokoll.spieleranlegen();
         Spieler p2 = Protokoll.spieleranlegen();
         p1.setCurrent(true);
         Stein s1 = new Stein("\u001B[34m",'○');
         Stein s2 = new Stein("\u001B[31m",'○');
         Stein[][] brett = Protokoll.spielBrettErzeugen();
-        brett[0][0] = s1;
-        brett[1][0] = s1;
-        brett[2][0] = s1;
-        brett[3][0] = s1;
-        brett[4][0] = s1;
-        brett[5][0] = s1;
-        Protokoll.brettAusgeben(brett);
-        brett = p2.steinLegen(s2, brett);
-        Protokoll.brettAusgeben(brett);
+
+        while (gewinner == false){
+            if (p1.getCurrent() == true){
+                Protokoll.brettAusgeben(brett);
+                brett = p1.steinLegen(s1, brett);
+                gewinner = Protokoll.ueberpruefe(brett,s1,s2);
+                if (gewinner == true){
+                    Protokoll.brettAusgeben(brett);
+                    System.out.println(p1.getName() + " hat gewonnen");
+                }else {
+                    p1.setCurrent(false);
+                }
+            }else {
+                Protokoll.brettAusgeben(brett);
+                brett = p2.steinLegen(s2, brett);
+                gewinner = Protokoll.ueberpruefe(brett,s1,s2);
+                if (gewinner == true){
+                    Protokoll.brettAusgeben(brett);
+                    System.out.println(p2.getName() + "hat gewonnen");
+                }else {
+                    p1.setCurrent(true);
+                }
+            }
+        }
     }
 }
 

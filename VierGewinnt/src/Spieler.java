@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Spieler {
-    private int i; //Zeile
-    private int j; //Spalte
 
     private static final Scanner lesen = new Scanner(System.in);
     private String name;
