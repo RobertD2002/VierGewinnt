@@ -1,7 +1,7 @@
 public class Modus implements Brett {
 
     Stein[][] feld ={   //stein
-            {null , null, null, null, null, null, null},
+            {null , null, null, null, null, null, null,},
             {null , null, null, null, null, null, null},
             {null , null, null, null, null, null, null},
             {null , null, null, null, null, null, null},
@@ -13,6 +13,7 @@ public class Modus implements Brett {
     public Stein[][] BrettErzeugen() {
         return feld;
     }
+
 
     public Stein[][] getFeld(){
         return this.feld;

@@ -5,6 +5,8 @@ public class Spiel {
     private static  final Scanner lesen = new Scanner(System.in);
     public static void main(String[] args){
         boolean gewinner = false;
+        boolean voll = false;
+
         Spieler p1 = Protokoll.spieleranlegen();
         Spieler p2 = Protokoll.spieleranlegen();
         p1.setCurrent(true);
@@ -12,10 +14,12 @@ public class Spiel {
         Stein s2 = new Stein("\u001B[31m",'○');
         Stein[][] brett = Protokoll.spielBrettErzeugen();
 
-        while (gewinner == false){
+        while (!gewinner || !voll){
+
             if (p1.getCurrent() == true){
                 Protokoll.brettAusgeben(brett);
                 brett = p1.steinLegen(s1, brett);
+                voll = Protokoll.brettvoll(brett);
                 gewinner = Protokoll.ueberpruefe(brett,s1,s2);
                 if (gewinner == true){
                     Protokoll.brettAusgeben(brett);
@@ -26,6 +30,7 @@ public class Spiel {
             }else {
                 Protokoll.brettAusgeben(brett);
                 brett = p2.steinLegen(s2, brett);
+                voll = Protokoll.brettvoll(brett);
                 gewinner = Protokoll.ueberpruefe(brett,s1,s2);
                 if (gewinner == true){
                     Protokoll.brettAusgeben(brett);
@@ -34,6 +39,9 @@ public class Spiel {
                     p1.setCurrent(true);
                 }
             }
+        }
+        if (voll){
+            System.out.println("Unentschieden");
         }
     }
 }
