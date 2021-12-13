@@ -13,7 +13,7 @@ public class Stein {
         this.form = '○';
     }
 
-
+//test
     //Override
     public String toString() {
         return  this.farbe + this.form;
