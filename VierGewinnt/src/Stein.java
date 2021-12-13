@@ -16,7 +16,7 @@ public class Stein {
 
     //Override
     public String toString() {
-            return  this.farbe + this.form;
+        return  this.farbe + this.form;
     }
     //Getter Setter
     public String getFarbe() {
