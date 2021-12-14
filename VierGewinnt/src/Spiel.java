@@ -14,8 +14,7 @@ public class Spiel {
         Stein s2 = new Stein("\u001B[31m",'○');
         Stein[][] brett = Protokoll.spielBrettErzeugen();
 
-        while (!gewinner || !voll){
-
+        while (!gewinner){
             if (p1.getCurrent() == true){
                 Protokoll.brettAusgeben(brett);
                 brett = p1.steinLegen(s1, brett);

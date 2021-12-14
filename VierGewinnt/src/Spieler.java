@@ -34,7 +34,7 @@ public class Spieler {
     public Stein[][] steinLegen(Stein s, Stein[][] brett){
         boolean wiederholen = false;
         while (wiederholen == false){
-            System.out.println(this.getName() + " welche spalte mÃ¶chtest du ein Stein legen?");
+            System.out.println(this.getName() + " welche spalte möchtest du ein Stein legen?");
             int j = lesen.nextInt();
             if (j < 8 && j > 0){
                 int i = 5;
