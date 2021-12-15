@@ -10,7 +10,7 @@ public class Stein {
     }
     public Stein (String farbe, char form) {
         this.farbe = farbe;
-        this.form = '○';
+        this.form = form;
     }
 
 //test

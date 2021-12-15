@@ -58,7 +58,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException ex){
-                        ex.getMessage();
+
                     }
                     //Nachen oben ueberpruefen
                     try {
@@ -67,7 +67,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exe){
-                        exe.getMessage();
+
                     }
 
                     //Nach rechts ueberpruefen
@@ -77,7 +77,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException ex){
-                        ex.getMessage();
+
                     }
                     //Nach links ueberpruefen
                     try {
@@ -86,7 +86,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                     try {
                         //Nach rechts oben diagonal ueberpruefen
@@ -104,7 +104,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                     try {
                         //Nach links oben diagonal ueberpruefen
@@ -113,7 +113,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                     try {
                         //Nach links unten diagonal ueberpruefen
@@ -122,7 +122,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                 }
                 //Spieler 2
@@ -134,7 +134,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException ex){
-                        ex.getMessage();
+
                     }
                     //Nachen oben ueberpruefen
                     try {
@@ -143,7 +143,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exe){
-                        exe.getMessage();
+
                     }
 
                     //Nach rechts ueberpruefen
@@ -153,7 +153,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException ex){
-                        ex.getMessage();
+
                     }
                     //Nach links ueberpruefen
                     try {
@@ -162,7 +162,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+                        e
                     }
                     try {
                         //Nach rechts oben diagonal ueberpruefen
@@ -180,7 +180,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                     try {
                         //Nach links oben diagonal ueberpruefen
@@ -189,7 +189,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                     try {
                         //Nach links unten diagonal ueberpruefen
@@ -198,7 +198,7 @@ public class Protokoll {
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException exception){
-                        exception.getMessage();
+
                     }
                 }
             }
