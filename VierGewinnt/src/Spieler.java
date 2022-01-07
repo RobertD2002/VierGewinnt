@@ -53,7 +53,7 @@ public class Spieler {
             System.out.print("\033[0m");
             System.out.println(this.getName() + " welche spalte möchtest du ein Stein legen?");
             int j = lesen.nextInt();
-            if (j < 8 && j > 0){
+            if (j < 8 && j > 0){                        // damit die spalten nicht bei 0 anfangen
                 int i = 5;
                 while (i >= 0) {
                     if (brett[i][j-1] == null) {
