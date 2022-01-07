@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="3499.0" y="-114.5">com</node>
+    <node x="3044.0" y="-114.5">netscape</node>
+    <node x="2758.5" y="-114.5">toolbarButtonGraphics</node>
+    <node x="2602.5" y="-114.5">sun</node>
+    <node x="1099.5" y="-452.0">Protokoll</node>
+    <node x="2360.0" y="-114.5">groovyjarjarasm</node>
+    <node x="2200.0" y="-114.5">java</node>
+    <node x="2036.5" y="-114.5">javax</node>
+    <node x="1771.5" y="-114.5">groovyjarjarpicocli</node>
+    <node x="963.5" y="-1016.0">Spieler</node>
+    <node x="1589.5" y="-114.5">images</node>
+    <node x="1232.5" y="-947.0">Brett</node>
+    <node x="1442.0" y="-114.5">org</node>
+    <node x="3227.0" y="-127.0">AusserhalbBrettException</node>
+    <node x="647.0" y="-1336.0">Stein</node>
+    <node x="2291.830490246978" y="-337.0">jdk</node>
+    <node x="2088.330490246978" y="-337.0">META-INF</node>
+    <node x="1312.5" y="-734.0">Modus</node>
+    <node x="570.5" y="-114.5">groovy</node>
+    <node x="754.5" y="-183.0">Spiel</node>
+    <node x="630.0" y="-441.0">SchwereKI</node>
+    <node x="3236.5" y="-418.0">VierGewinntException</node>
+    <node x="273.5" y="-114.5">groovyjarjarcommonscli</node>
+    <node x="823.5" y="-710.0">EinfacheKI</node>
+    <node x="38.5" y="-114.5">groovyjarjarantlr</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Spiel" target="Spieler" relationship="DEPENDENCY">
+      <point x="70.33333333333337" y="-83.0" />
+      <point x="970.3333333333334" y="-220.0" />
+      <point x="1080.0" y="-220.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="Modus" target="Stein" relationship="DEPENDENCY">
+      <point x="20.0" y="-74.0" />
+      <point x="1420.0" y="-780.0" />
+      <point x="1440.0" y="-780.0" />
+      <point x="1440.0" y="-1060.0" />
+      <point x="720.0" y="-1060.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="Spiel" target="SchwereKI" relationship="CREATE">
+      <point x="-80.0" y="-83.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="SchwereKI" target="Stein" relationship="DEPENDENCY">
+      <point x="-100.0" y="-61.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="EinfacheKI" target="Stein" relationship="DEPENDENCY">
+      <point x="-60.0" y="-50.0" />
+      <point x="880.0" y="-1060.0" />
+      <point x="720.0" y="-1060.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="Spiel" target="EinfacheKI" relationship="CREATE">
+      <point x="-80.0" y="-83.0" />
+      <point x="820.0" y="-300.0" />
+      <point x="1040.0" y="-300.0" />
+      <point x="1040.0" y="-460.0" />
+      <point x="1000.0" y="-460.0" />
+      <point x="60.0" y="50.0" />
+    </edge>
+    <edge source="Protokoll" target="Modus" relationship="CREATE">
+      <point x="-60.0" y="-72.0" />
+      <point x="1160.0" y="-520.0" />
+      <point x="1400.0" y="-520.0" />
+      <point x="0.0" y="74.0" />
+    </edge>
+    <edge source="Spieler" target="Stein" relationship="DEPENDENCY">
+      <point x="0.0" y="-96.0" />
+      <point x="1080.0" y="-1060.0" />
+      <point x="720.0" y="-1060.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="Spiel" target="Protokoll" relationship="DEPENDENCY">
+      <point x="70.33333333333337" y="-83.0" />
+      <point x="970.3333333333334" y="-220.0" />
+      <point x="1080.0" y="-220.0" />
+      <point x="1080.0" y="-240.0" />
+      <point x="1220.0" y="-240.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="Brett" target="Stein" relationship="DEPENDENCY">
+      <point x="0.0" y="-27.0" />
+      <point x="1320.0" y="-1060.0" />
+      <point x="720.0" y="-1060.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="AusserhalbBrettException" target="VierGewinntException" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="EinfacheKI" target="Spieler" relationship="GENERALIZATION">
+      <point x="60.0" y="-50.0" />
+      <point x="-80.0" y="96.0" />
+    </edge>
+    <edge source="Protokoll" target="Spieler" relationship="CREATE">
+      <point x="-60.0" y="-72.0" />
+      <point x="80.0" y="96.0" />
+    </edge>
+    <edge source="Protokoll" target="Stein" relationship="DEPENDENCY">
+      <point x="60.0" y="-72.0" />
+      <point x="1280.0" y="-500.0" />
+      <point x="1520.0" y="-500.0" />
+      <point x="1520.0" y="-1060.0" />
+      <point x="720.0" y="-1060.0" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="Modus" target="Brett" relationship="REALIZATION">
+      <point x="-60.0" y="-74.0" />
+      <point x="1340.0" y="-780.0" />
+      <point x="1320.0" y="-780.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Modus" target="Stein" relationship="TO_ONE">
+      <point x="60.0" y="-74.0" />
+      <point x="1460.0" y="-780.0" />
+      <point x="1480.0" y="-780.0" />
+      <point x="1480.0" y="-1080.0" />
+      <point x="760.0" y="-1080.0" />
+      <point x="40.0" y="96.0" />
+    </edge>
+    <edge source="Spiel" target="Stein" relationship="CREATE">
+      <point x="-80.0" y="-83.0" />
+      <point x="820.0" y="-300.0" />
+      <point x="600.0" y="-300.0" />
+      <point x="600.0" y="-940.0" />
+      <point x="680.0" y="-940.0" />
+      <point x="-40.0" y="96.0" />
+    </edge>
+    <edge source="SchwereKI" target="EinfacheKI" relationship="GENERALIZATION">
+      <point x="60.0" y="-61.0" />
+      <point x="-60.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.561323896752706" showDependencies="true" x="1399.0488424391592" y="-690.1134020618556" />
+  <SelectedNodes>
+    <node>jdk</node>
+    <node>META-INF</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,10 +1,14 @@
 import javax.swing.*;
+import java.awt.Color;
 
 public class Stein {
+
+    //Attribute
     private String farbe;
     private char form ;
 
 
+    //Konstruktoren
     public  Stein(){
 
     }
@@ -13,9 +17,9 @@ public class Stein {
         this.form = form;
     }
 
-//test
     //Override
     public String toString() {
+
         return  this.farbe + this.form;
     }
     //Getter Setter
@@ -34,4 +38,6 @@ public class Stein {
     public void setForm(char form) {
         this.form = form;
     }
+
+
 }

@@ -1,65 +1,29 @@
-import java.util.Scanner;
+public class SchwereKI extends  EinfacheKI{
 
-public class Protokoll {
-    private static final Scanner lesen = new Scanner(System.in);
+    public SchwereKI() {
+    }
 
-    /**
-     * Hier wird ein Spieler angelegt
-     * @return
-     */
-    public static Spieler spieleranlegen(){
-        Spieler p = null;
-        String name;
-        System.out.println("Spieler Namen eingeben:");
-        name = lesen.next();
-        return p = new Spieler(name, false);
+    public SchwereKI(String s, boolean b) {
+        super(s, b);
     }
 
     /**
-     * Mit der Methode spielBrettErzeugen wird ein Brett erzeugt
-     * @return
-     */
-    public static Stein[][] spielBrettErzeugen(){
-        Modus modus = new Modus();
-        return modus.getFeld();
-    }
-
-
-    /**
-     * Ausgeben des Brettes mit 2 for schleifen
-     * @param brett
-     */
-    public static void brettAusgeben(Stein[][] brett) {
-        for(int i = 0; i < brett.length; i++) {
-            for(int j = 0; j < brett[i].length; j++) {
-                if(brett[i][j] == null){
-                    System.out.print("\t");
-                }
-                else{
-                    System.out.print(brett[i][j]+"\t");
-
-                }
-            }
-            System.out.println();
-        }
-    }
-
-    /**
-     * In der Methode wird überprüft ob 4 gleiche Steine Diagonal, Vertikal oder Horizontal sind.
-     * Zu erst wird überprüft ob ein Stein sich im Index befindet.
-     * Wenn ja dann gehen wir alle Varianten durch ob im anderen Index sich auch die gleichen Steine befinden.
+     * Mit der Methode wird überprüft ob der Gegner 3 Steine in der Reihe hat.
+     * Und verhindert es, indem er an der richtigen Position ein Stein legt.
      * @param brett
      * @param s
+     * @param ki
      * @return
      */
-    public static boolean ueberpruefe(Stein[][] brett, Stein s){
+    public boolean Gegenerfastgewinntlegen(Stein[][] brett, Stein s, Stein ki){
         for (int i = 0; i < brett.length; i++){
             for(int j = 0; j< brett[i].length; j++){
                 if (brett[i][j] == s){
                     //Spieler 1
                     //Nach unten überpruefen
                     try{
-                        if (brett[i+1][j] == s && brett[i+2][j] == s && brett[i+3][j] == s) {
+                        if (brett[i+1][j] == s && brett[i+2][j] == s ) {
+                            this.steinLegenfastgewonnen(s,ki,brett,i-1,j);
                             return true;
                         }
                     }
@@ -68,7 +32,8 @@ public class Protokoll {
                     }
                     //Nachen oben ueberpruefen
                     try {
-                        if (brett[i-1][j] == s && brett[i-2][j] == s && brett[i-3][j] == s) {
+                        if (brett[i-1][j] == s && brett[i-2][j] == s ) {
+                            this.steinLegenfastgewonnen(s,ki,brett,i+1,j);
                             return true;
                         }
                     }
@@ -78,7 +43,8 @@ public class Protokoll {
 
                     //Nach rechts ueberpruefen
                     try {
-                        if (brett[i][j+1] == s && brett[i][j+2] == s && brett[i][j+3] == s){
+                        if (brett[i][j+1] == s && brett[i][j+2] == s ){
+                             this.steinLegenfastgewonnen(s,ki,brett,i,-1);
                             return true;
                         }
                     }
@@ -87,7 +53,8 @@ public class Protokoll {
                     }
                     //Nach links ueberpruefen
                     try {
-                        if (brett[i][j-1] == s && brett[i][j-2] == s && brett[i][j-3] == s){
+                        if (brett[i][j-1] == s && brett[i][j-2] == s){
+                            this.steinLegenfastgewonnen(s,ki,brett,i,j+1);
                             return true;
                         }
                     }
@@ -96,7 +63,8 @@ public class Protokoll {
                     }
                     try {
                         //Nach rechts oben diagonal ueberpruefen
-                        if (brett[i-1][j+1] == s && brett[i-2][j+2] == s && brett[i-3][j+3] == s){
+                        if (brett[i-1][j+1] == s && brett[i-2][j+2] == s ){
+                            this.steinLegenfastgewonnen(s,ki,brett,i+1,j-1);
                             return true;
                         }
                     }
@@ -105,7 +73,8 @@ public class Protokoll {
                     }
                     try {
                         //Nach rechts unten diagonal ueberpruefen
-                        if (brett[i+1][j+1] == s && brett[i+2][j+2] == s && brett[i+3][j+3] == s) {
+                        if (brett[i+1][j+1] == s && brett[i+2][j+2] == s ) {
+                            this.steinLegenfastgewonnen(s,ki,brett,i-1,j-1);
                             return true;
                         }
                     }
@@ -114,7 +83,8 @@ public class Protokoll {
                     }
                     try {
                         //Nach links oben diagonal ueberpruefen
-                        if (brett[i-1][j-1] == s && brett[i-2][j-2] == s && brett[i-3][j-3] == s){
+                        if (brett[i-1][j-1] == s && brett[i-2][j-2] == s ){
+                             this.steinLegenfastgewonnen(s,ki,brett,i+1,j+1);
                             return true;
                         }
                     }
@@ -123,7 +93,8 @@ public class Protokoll {
                     }
                     try {
                         //Nach links unten diagonal ueberpruefen
-                        if (brett[i+1][j-1] == s && brett[i+2][j-2] == s && brett[i+3][j-3] == s){
+                        if (brett[i+1][j-1] == s && brett[i+2][j-2] == s ){
+                            this.steinLegenfastgewonnen(s,ki,brett,i-1,j+1);
                             return true;
                         }
                     }
@@ -134,5 +105,21 @@ public class Protokoll {
             }
         }
         return false;
+    }
+
+    /**
+     * An der Position wird dann der Stein gelegt
+     * @param s
+     * @param ki
+     * @param brett
+     * @param x
+     * @param y
+     * @return
+     */
+    public Stein[][] steinLegenfastgewonnen(Stein s,Stein ki, Stein[][] brett,int x, int y) {
+        if (brett[x][y] != s || brett[x][y]!=ki){
+            brett[x][y] = ki;
+        }
+        return brett;
     }
 }
