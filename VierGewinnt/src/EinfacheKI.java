@@ -12,9 +12,6 @@ public class EinfacheKI extends Spieler {
     }
 
     public Stein[][] steinLegen(Stein s, Stein[][] brett){
-        Random random = new Random();
-        int n = random.nextInt(6);
-
         boolean wiederholen = false;
         while (wiederholen == false){
             int j = (int)(Math.random()*(7-1)) + 1;
